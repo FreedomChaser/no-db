@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import './reset.css';
 import './App.css';
+import GetCards from './lowerComps/GetCards';
+import CreateCard from './upperComps/CreateCard'
+import axios from 'axios';
 
 class App extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      cardsToDisplay:[]
+      
+    }
+    this.cardsUpdate = this.cardsUpdate.bind( this )
+  }
+  componentDidMount(){
+     axios.get('/api/cards/').then(result => {
+      this.setState({ cardsToDisplay: result.data })
+    })
+  }
+  cardsUpdate(up){
+    this.setState({cardsToDisplay: up})
+  }
+    
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>My Super Characters</h1>
+      <button>See Heroes</button>
+        <CreateCard cards = {this.state.cardsToDisplay} cardsUp={(e) => this.cardsUpdate()}/>
+        <GetCards cards = {this.state.cardsToDisplay}/>
       </div>
     );
   }
