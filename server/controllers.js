@@ -14,6 +14,7 @@ module.exports = {
         const {secretIdentity, gender, superName, superPower, coreConflict, alignment } = req.body;
         cards.push({id, secretIdentity, gender, superName, superPower, coreConflict, alignment })
         id++
+        console.log(cards);
         console.log(req)
         res.status(200).send( cards )
     },

@@ -21,6 +21,7 @@ class App extends Component {
     })
   }
   cardsUpdate(up){
+    console.log(up)
     this.setState({cardsToDisplay: up})
   }
     
@@ -29,7 +30,7 @@ class App extends Component {
       <div>
         <h1>My Super Characters</h1>
       <button>See Heroes</button>
-        <CreateCard cards = {this.state.cardsToDisplay} cardsUp={(e) => this.cardsUpdate()}/>
+        <CreateCard cards = {this.state.cardsToDisplay} cardsUp={(e) => this.cardsUpdate(e)}/>
         <GetCards cards = {this.state.cardsToDisplay}/>
       </div>
     );

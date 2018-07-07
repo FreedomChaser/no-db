@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 
 export default function GetCards(props) {
+  console.log(props.cards)
   let mappedCards = (props.cards.map(elem => {
     return <div key={elem.id}>
       <ul>

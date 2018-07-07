@@ -6,8 +6,8 @@ import GetCards from '../lowerComps/GetCards'
 
 class CreateCard extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
 
         this.state = {
             secretIdentity: '',
@@ -54,7 +54,8 @@ class CreateCard extends Component {
             alignment: this.state.alignment })
         
         .then(response => {
-            this.props.cardsUp(response);
+            console.log(response.data)
+            this.props.cardsUp(response.data);
         })
     }
 
