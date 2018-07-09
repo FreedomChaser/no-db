@@ -1,28 +1,78 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Shadows+Into+Light');
+
+
+body{
+  /* font-family: 'Shadows Into Light', cursive; */
+  width:100%;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #108DB9;
+  background-image: url("https://wallpaper-house.com/data/out/10/wallpaper2you_397785.jpg");
+  background-size: cover;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+h1{
+  font-size: 30px;
+  margin: 20x;
+}
+h2{
   text-align: center;
+  padding: 5px;
+  font-size: 20pt;
+}
+.create-hero{
+  width:350px;
+  height: auto;
+  margin: 30px;
+  color:black;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
+  
+}
+.cardAlign{
+  display: flex;
+  justify-content: space-around;
+}
+.get-hero{
+  width:350px;
+  height: auto;
+  margin: 30px;
+  color:black;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  padding: 5px;
+}
+footer{
+  margin: 40px;
+}
+p{
+  padding: 5px;
+}
+button{
+  background:#66ffff; 
+  border:0px;
+  border-radius: 2px;
+  box-shadow: grey 2px 2px 1px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+#fixAlignment{
+  margin-left: 50px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
