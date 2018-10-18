@@ -47,7 +47,7 @@ export default function GetCards(props) {
   
   
     return (
-      <div>
+      <div class='cardAlign'>
       {mappedCards}
       </div>
     )

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Shadows+Into+Light');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Russo+One|Shadows+Into+Light');
 
 body{
   /* font-family: 'Shadows Into Light', cursive; */
@@ -14,11 +13,16 @@ body{
   align-items: center;
 }
 header{
+  height: 80px;
+  background-color:#022634;
+  box-shadow: slateblue 10px 10px 1px;
   display: flex;
   justify-content: center;
-  margin: 20px;
+  align-items: center;
+  /* margin: 20px; */
 }
 h1{
+  font-family: 'Russo One', sans-serif;
   font-size: 30px;
   margin: 20x;
 }
@@ -42,9 +46,13 @@ h2{
 }
 .cardAlign{
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .get-hero{
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-size: 13pt;
   width:350px;
   height: auto;
   margin: 30px;

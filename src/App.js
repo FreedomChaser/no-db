@@ -61,9 +61,9 @@ class App extends Component {
           <CreateCard cards={this.state.cardsToDisplay} cardsUp={(e) => this.cardsUpdate(e)} />
           </div>
 
-          <div >
-        <GetCards class='cardAlign' cards={this.state.cardsToDisplay}  delete={(e) => this.deleteInput(e)} cardsUp={this.cardsUpdate}/>
-          </div>
+        
+        <GetCards  cards={this.state.cardsToDisplay}  delete={(e) => this.deleteInput(e)} cardsUp={this.cardsUpdate}/>
+        
         </body>
 
         <footer>
